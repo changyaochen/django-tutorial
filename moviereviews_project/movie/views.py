@@ -1,11 +1,20 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .models import Movie
+
 
 def home(request):
     """A simple homepage."""
     search_term = request.GET.get('searchMovie')
-    return render(request, 'home.html', {'searchTerm': search_term})
+    if search_term:
+        movies = Movie.objects.filter(title__icontains=search_term)
+    else:
+        movies = Movie.objects.all()
+
+    return render(
+        request, 'home.html',
+        {'searchTerm': search_term, 'movies': movies})
 
 
 def about(request):
