@@ -25,4 +25,5 @@ def sessfun(request) :
     if num_visits > 4:
         del request.session['num_visits']
     resp = HttpResponse('view count='+str(num_visits))
+    resp.set_cookie('dj4e_cookie', '5270c4bc', max_age=1000)
     return resp
