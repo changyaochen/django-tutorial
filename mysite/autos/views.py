@@ -1,3 +1,6 @@
+from autos.forms import MakeForm
+from autos.models import Auto
+from autos.models import Make
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
@@ -7,10 +10,6 @@ from django.views import View
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import DeleteView
 from django.views.generic.edit import UpdateView
-
-from autos.forms import MakeForm
-from autos.models import Auto
-from autos.models import Make
 
 # Create your views here.
 
