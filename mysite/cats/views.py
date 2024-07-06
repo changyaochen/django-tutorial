@@ -20,7 +20,7 @@ class BreedList(LoginRequiredMixin, View):
 class BreedCreate(LoginRequiredMixin, CreateView):
     model = Breed
     fields = "__all__"
-    success_url = reverse_lazy("cats:all")
+    success_url = reverse_lazy("cats:breed_list")
 
 
 class BreedUpdate(LoginRequiredMixin, UpdateView):
