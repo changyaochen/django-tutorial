@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'autos.apps.AutosConfig',
     'cats.apps.CatsConfig'
+    'ads.apps.AdsConfig',
 ]
 
 MIDDLEWARE = [
