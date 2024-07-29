@@ -31,17 +31,27 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-    'home.apps.HomeConfig',
-    'hello.apps.HelloConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+
+    # Extensions - installed with requirements.txt
+    'django_extensions',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'rest_framework',
+    'social_django',
+    'taggit',
+
+    'polls.apps.PollsConfig',
+    'home.apps.HomeConfig',
+    'hello.apps.HelloConfig',
     'autos.apps.AutosConfig',
-    'cats.apps.CatsConfig'
+    'cats.apps.CatsConfig',
     'ads.apps.AdsConfig',
 ]
 
@@ -56,6 +66,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 TEMPLATES = [
     {
