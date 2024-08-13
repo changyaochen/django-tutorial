@@ -1,4 +1,4 @@
-django==4.0
+django==4.2.7
 pillow
 
 # Other requirments - frozen to a version to simplify tech support
